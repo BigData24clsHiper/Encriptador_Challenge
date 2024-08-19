@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>Challenge | Celso S. C. &amp; Desafío Alura LATAM</title>
+
+
+    <!-- ===============================================-->
+    <!--    Favicons-->
+    <!-- ===============================================-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/alura.ico">
+    <link rel="manifest" href="assets/img/favicons/manifest.json">
+    <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link href="./assets/css/theme.css" rel="stylesheet" />
+    
+
+  </head>
+
+
+  <body>
+
+    <!-- ===============================================-->
+    <!--    Main Content-->
+    <!-- ===============================================-->
+    <main class="main" id="top">
+ 
+      <section class="py-0" id="home">
+        <div class="bg-holder d-none d-lg-block" style="background-image:url(assets/img/illustrations/1.png);background-position:right top;background-size:contain;">
+        </div>
+        <!--/.bg-holder-->
+
+        <div class="bg-holder  d-lg-none" style="background-image:url(assets/img/illustrations/1-1.png);background-position:left top;background-size:cover;">
+        </div>
+        <!--/.bg-holder-->
+
+        <div class="container">
+          <div class="row align-items-center min-vh-100">
+            <div class="col-md-4 col-lg-4 py-4 text-md-start text-center">
+              <!-- <h1>Ingrese el texto aquí</h1>-->
+              <div class="pt-3"><h6></h6></div>
+              <div class="pt-4">
+                <h6><img class="list-social-icon" src="assets/img/icons/information.svg" alt="" width="20"/> Solo letra minusculas y sin acentos.</h6>
+                <textarea class="form-control" rows="10" id="CadenaTexto" onfocus="limpiar_textarea(event);" onkeypress="return permitir_sololetras(event);"></textarea>
+                <!--<input id="CadenaTexto" type="text" class="lead text-muted" onkeypress="return permitir_sololetras(event);">-->
+              </div>
+              <div class="pt-3">
+                <button onclick="encripta_cadena();" class="btn btn-primary me-3" id="intentar" >Encripta</button>
+                <button onclick="desencripta_cadena();" class="btn btn-outline-primary" id="reiniciar" >Desencripta</button>
+              </div>
+            </div>
+            <div class="col-md-1 col-lg-1 py-1 text-md-start text-center">
+
+            </div>
+            <div class="col-md-5 col-lg-5 py-5 text-md-start text-center">
+              <textarea readonly class="form-control" rows="15" id="CadenaConvertido" onkeypress="return permitir_sololetras(event);"></textarea>
+              <div class="pt-1">
+                <div class="pt-2"><h5></h5></div>
+                <div class="pt-2"><h7></h7></div>
+                <button onclick="copiar_cadena();" class="btn btn-primary me-3" id="Copiar">Copiar</button>
+              </div>
+              <!--<div class="pt-0"><h7>Ingrese el texto que desees encriptar o desencriptar.</h7></div>-->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="position-relative">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 319">
+          <path fill="#F3F5FF" fill-opacity="1" d="M0,128L120,144C240,160,480,192,720,192C960,192,1200,160,1320,144L1440,128L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
+        </svg>
+      </div>
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      <section class="pt-5 pb-2 bg-200">
+
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <p class="text-500 mb-0 mt-2">&copy; 2024 ClsHiper.</p>
+            </div>
+            <div class="col-sm-6 col-md-4 text-md-center"> <a class="fw-bold fs-3 text-decoration-none pt-3" href="index.html"> Challenger - Alura LATAM </a></div>
+            <hr class="mt-5 opacity-25" />
+            <div class="col-sm-12 col-md-4 px-md-0 pt-md-2 text-md-center order-1 order-md-0">
+              <div class="text-500">Este trabajo fue desarrollado con mucho&nbsp;
+                <svg class="bi bi-heart" xmlns="http://www.w3.org/2000/svg" width="16" fill="currentColor" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"></path>
+                </svg>&nbsp;by&nbsp;<a class="text-500" href="https://themewagon.com/" target="_blank">Celso</a>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-4 text-md-right px-md-0 pt-md-2">
+              <ul class="list-unstyled list-inline">
+                <li class="list-inline-item mr-3"><a class="text-decoration-none" href="https://www.linkedin.com/in/c-sanchezc/"><img class="list-social-icon" src="assets/img/icons/linkedin.svg" alt="" width="20" /></a></li>
+                <li class="list-inline-item mr-3"><a class="text-decoration-none" href="https://github.com/BigData24clsHiper"><img class="list-social-icon" src="assets/img/icons/github.svg" alt="" width="20" /></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- end of .container-->
+
+      </section>
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
+
+
+    </main>
+    <!-- ===============================================-->
+    <!--    End of Main Content-->
+    <!-- ===============================================-->
+
+
+
+
+    <!-- ===============================================-->
+    <!--    JavaScripts-->
+    <!-- ===============================================-->
+
+    <script src="./assets/js/logica_funcional_web.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap" rel="stylesheet">
+  </body>
+
+</html>
